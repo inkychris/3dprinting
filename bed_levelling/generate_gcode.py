@@ -57,8 +57,6 @@ class Gcode:
 
 gcode = Gcode('; Bed Levelling' ,'G90')
 
-print(args.bed_temp)
-
 if args.bed_temp > 0:
     gcode << f'M140 S{args.bed_temp}'
 
@@ -81,14 +79,15 @@ for iteration in range(1, args.iterations + 1):
         gcode.move(z=1)
         gcode.move(x=coords[0], y=coords[1])
         gcode.home_z()
+        gcode.message(f'Loop {iteration}/{args.iterations} [{i + 1}/{len(coordinates)}]')
         gcode.sleep(args.wait_time)
-        gcode.message(f'Loop {iteration}/{args.iterations} | Point {i + 1}/{len(coordinates)}')
 
 gcode.message('Bed-levelling Complete!')
 gcode.move(z=1)
 gcode.home_x()
 gcode.home_y()
 
-default_file = args.output_file or f'bed-levelling-{args.inset}.gcode'
-with open(default_file, 'w') as outfile:
+file = args.output_file or f'bed-levelling-{args.inset}.gcode'
+with open(file, 'w') as outfile:
     outfile.write(str(gcode))
+print(f"gcode written to '{file}'")

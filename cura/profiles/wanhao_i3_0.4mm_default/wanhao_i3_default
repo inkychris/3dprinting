@@ -1,0 +1,15 @@
+[general]
+version = 4
+name = Default
+definition = fdmprinter
+
+[metadata]
+setting_version = 10
+intent_category = default
+quality_type = draft
+type = quality_changes
+
+[values]
+adhesion_type = skirt
+material_bed_temperature = 55
+

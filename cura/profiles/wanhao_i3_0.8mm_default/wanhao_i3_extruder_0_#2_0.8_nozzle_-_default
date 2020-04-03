@@ -1,0 +1,49 @@
+[general]
+version = 4
+name = 0.8 Nozzle - Default
+definition = fdmprinter
+
+[metadata]
+setting_version = 10
+position = 0
+intent_category = default
+quality_type = not_supported
+type = quality_changes
+
+[values]
+acceleration_layer_0 = 500
+acceleration_print = 700
+acceleration_travel = 1000
+alternate_extra_perimeter = True
+brim_line_count = =math.ceil(brim_width / (skirt_brim_line_width * initial_layer_line_width_factor / 100.0))
+brim_width = 1.5
+cool_fan_enabled = False
+cool_fan_speed_min = 35
+infill_overlap = 15
+infill_pattern = cubic
+infill_sparse_density = 15
+infill_wipe_dist = 0.2
+jerk_layer_0 = 4
+jerk_print = 7
+jerk_travel = 10
+line_width = 0.8
+material_final_print_temperature = 200
+material_flow = 102
+material_print_temperature = 210
+optimize_wall_printing_order = True
+retraction_amount = 0.5
+retraction_extra_prime_amount = 0.064
+retraction_speed = 40
+skin_outline_count = 0
+skirt_gap = 3
+speed_layer_0 = 17
+speed_print = 40
+speed_print_layer_0 = 10
+speed_topbottom = 35
+speed_travel = 80
+speed_wall = 35.0
+speed_wall_x = 50.0
+top_bottom_thickness = 1.2
+wall_thickness = 1.6
+z_seam_type = random
+

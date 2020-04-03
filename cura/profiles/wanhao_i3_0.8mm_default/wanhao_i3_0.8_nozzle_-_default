@@ -1,0 +1,19 @@
+[general]
+version = 4
+name = 0.8 Nozzle - Default
+definition = fdmprinter
+
+[metadata]
+setting_version = 10
+quality_type = not_supported
+type = quality_changes
+
+[values]
+acceleration_enabled = True
+adhesion_type = skirt
+jerk_enabled = True
+layer_height = 0.3
+layer_height_0 = 0.2
+material_bed_temperature = 55
+retraction_combing = off
+

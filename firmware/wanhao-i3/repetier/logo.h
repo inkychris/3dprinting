@@ -4,8 +4,8 @@
 //------------------------------------------------------------------------------
 
 #ifndef CUSTOM_LOGO
-#define LOGO_WIDTH   60
-#define LOGO_HEIGHT  64
+#define LOGO_WIDTH   0 // 60
+#define LOGO_HEIGHT  0 // 64
 
 const unsigned char logo[] PROGMEM = { //AVR-GCC, WinAVR
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

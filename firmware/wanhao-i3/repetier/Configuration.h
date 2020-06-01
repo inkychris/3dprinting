@@ -82,7 +82,7 @@
 #define EXT0_Y_OFFSET 0
 #define EXT0_Z_OFFSET 0
 #define EXT0_STEPS_PER_MM 409
-#define EXT0_TEMPSENSOR_TYPE 97
+#define EXT0_TEMPSENSOR_TYPE 5
 #define EXT0_TEMPSENSOR_PIN TEMP_0_PIN
 #define EXT0_HEATER_PIN HEATER_0_PIN
 #define EXT0_STEP_PIN ORIG_E0_STEP_PIN
@@ -149,8 +149,8 @@
 #define SCALE_PID_TO_MAX 0
 #define TEMP_HYSTERESIS 0
 #define EXTRUDE_MAXLENGTH 160
-#define NUM_TEMPS_USERTHERMISTOR0 0
-#define USER_THERMISTORTABLE0 {}
+#define NUM_TEMPS_USERTHERMISTOR0 22
+#define USER_THERMISTORTABLE0 {{34,2400},{45,2240},{61,2080},{84,1920},{120,1760},{175,1600},{259,1440},{397,1280},{616,1120},{959,960},{1465,800},{1950,680},{2126,640},{2834,480},{3153,400},{3423,320},{3723,200},{3908,80},{3983,0},{4030,-80},{4076,-240},{4090,-400}}
 #define NUM_TEMPS_USERTHERMISTOR1 0
 #define USER_THERMISTORTABLE1 {}
 #define NUM_TEMPS_USERTHERMISTOR2 0
@@ -635,7 +635,7 @@ Values must be in range 1..255
             "pidDriveMin": 40,
             "pidDriveMax": 230,
             "pidMax": 255,
-            "sensorType": 97,
+            "sensorType": 5,
             "sensorPin": "TEMP_0_PIN",
             "heaterPin": "HEATER_0_PIN",
             "maxFeedrate": 50,
@@ -896,9 +896,120 @@ Values must be in range 1..255
     "gen3R2": 4700,
     "userTable0": {
         "r1": 0,
-        "r2": 4700,
-        "temps": [],
-        "numEntries": 0
+        "r2": 10000,
+        "temps": [
+            {
+                "t": 300,
+                "r": 82.78,
+                "adc": 33.620102789112
+            },
+            {
+                "t": 280,
+                "r": 110.5,
+                "adc": 44.755204984917
+            },
+            {
+                "t": 260,
+                "r": 150.7,
+                "adc": 60.795462381905
+            },
+            {
+                "t": 240,
+                "r": 210.4,
+                "adc": 84.383373814934
+            },
+            {
+                "t": 220,
+                "r": 301.6,
+                "adc": 119.88933757863
+            },
+            {
+                "t": 200,
+                "r": 445.2,
+                "adc": 174.53892697124
+            },
+            {
+                "t": 180,
+                "r": 676.3,
+                "adc": 259.40152487285
+            },
+            {
+                "t": 160,
+                "r": 1074,
+                "adc": 397.14917825537
+            },
+            {
+                "t": 140,
+                "r": 1770,
+                "adc": 615.81563296517
+            },
+            {
+                "t": 120,
+                "r": 3058,
+                "adc": 958.99142288252
+            },
+            {
+                "t": 100,
+                "r": 5569,
+                "adc": 1464.7732673903
+            },
+            {
+                "t": 85,
+                "r": 9094,
+                "adc": 1950.3472294962
+            },
+            {
+                "t": 80,
+                "r": 10800,
+                "adc": 2126.25
+            },
+            {
+                "t": 60,
+                "r": 22480,
+                "adc": 2834.224137931
+            },
+            {
+                "t": 50,
+                "r": 33450,
+                "adc": 3152.5373993096
+            },
+            {
+                "t": 40,
+                "r": 50900,
+                "adc": 3422.5862068966
+            },
+            {
+                "t": 25,
+                "r": 100000,
+                "adc": 3722.7272727273
+            },
+            {
+                "t": 10,
+                "r": 208800,
+                "adc": 3907.8427787934
+            },
+            {
+                "t": 0,
+                "r": 354600,
+                "adc": 3982.6851343939
+            },
+            {
+                "t": -10,
+                "r": 623200,
+                "adc": 4030.3284902085
+            },
+            {
+                "t": -30,
+                "r": 2156000,
+                "adc": 4076.0941828255
+            },
+            {
+                "t": -50,
+                "r": 8887000,
+                "adc": 4090.397324941
+            }
+        ],
+        "numEntries": 22
     },
     "userTable1": {
         "r1": 0,
